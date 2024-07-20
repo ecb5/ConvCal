@@ -1,9 +1,9 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "spring-2024",
+  "id": "Calendar-Year-2024",
   "level": "1",
-  "url": "spring-2024.html",
+  "url": "Calendar-Year-2024.html",
   "type": "Section",
   "number": "1",
   "title": "Events for Calendar Year, 2024",
