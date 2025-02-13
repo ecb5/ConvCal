@@ -8,7 +8,8 @@ deploy: *.ptx  Makefile
 	/home/ecb5/.local/bin/pretext deploy -u
 
 jing: *.ptx 
-	jing /home/ecb5/.ptx/schema/pretext.rng main.ptx
+	jjing  main.ptx
+#	jing /home/ecb5/.ptx/schema/pretext.rng main.ptx
 
 
 latex: *.ptx Makefile 
