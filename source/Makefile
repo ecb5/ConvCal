@@ -24,4 +24,7 @@ epub: *.ptx
 view:
 	/home/ecb5/.local/bin/pretext view web
 
+viewpdf:
+	/home/ecb5/.local/bin/pretext view print
+
 clean: 
