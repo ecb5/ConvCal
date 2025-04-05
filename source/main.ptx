@@ -35,9 +35,7 @@ Entries are tagged as follows:
 <li>
 
 
-              <m>\textcolor{green}{\text{This event is hybrid
-                                         (occurring simultaneously
-                                         in-person and online).}}</m>
+  <m>\textcolor{green}{\text{This event is hybrid (in-person and online).}}</m>
 </li>
 <li>
 
@@ -64,7 +62,7 @@ Entries are tagged as follows:
 
 <xi:include href="./2025.ptx" />
 <xi:include href="./2024.ptx" />
-
+<!-- <xi:include href="./dum.ptx" /> -->
 
   </article>
 </pretext>
