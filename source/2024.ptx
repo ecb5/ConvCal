@@ -1,6 +1,31 @@
     <section  xml:id="Calendar-Year-2024">
       <title> 2024 History of Mathematics Events  </title>
       <p>
+        If you would like us to list your event contact one of the HoM SIGMAA officers or send an email to: 
+        <url href="mailto:historyofmathcalendar@gmail.com" 
+             visual="mailto:historyofmathcalendar@gmail.com">
+        historyofmathcalendar@gmail.com</url>
+      </p>
+
+      <p>
+        Entries are tagged as follows:
+        <ul>
+          <li>
+            <m>\textcolor{blue}{\text{This event will be online only.}}</m>
+
+          </li>
+          <li>
+            <m>\textcolor{red}{\text{This event has been cancelled.}}</m>
+          </li>
+          <li>
+            <m>\textcolor{green}{\text{This event is hybrid (in-person and online).}}</m>
+          </li>
+          <li>
+            <m>\textcolor{orange}{\text{A recording has been made available.}}</m>
+          </li>
+        </ul>
+      </p>
+      <p>
         <dl>
           <li>
             <title>January  3<mdash/>6, 2024</title>

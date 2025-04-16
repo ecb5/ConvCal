@@ -13,24 +13,24 @@
         historyofmathcalendar@gmail.com</url>
       </p>
 
-      <p>
-        Entries are tagged as follows:
-        <ul>
-          <li>
-            <m>\textcolor{blue}{\text{This event will be online only.}}</m>
+      <!-- <p> -->
+      <!--   Entries are tagged as follows: -->
+      <!--   <ul> -->
+      <!--     <li> -->
+      <!--       <m>\textcolor{blue}{\text{This event will be online only.}}</m> -->
 
-          </li>
-          <li>
-            <m>\textcolor{red}{\text{This event has been cancelled.}}</m>
-          </li>
-          <li>
-            <m>\textcolor{green}{\text{This event is hybrid (in-person and online).}}</m>
-          </li>
-          <li>
-            <m>\textcolor{orange}{\text{A recording has been made available.}}</m>
-          </li>
-        </ul>
-      </p>
+      <!--     </li> -->
+      <!--     <li> -->
+      <!--       <m>\textcolor{red}{\text{This event has been cancelled.}}</m> -->
+      <!--     </li> -->
+      <!--     <li> -->
+      <!--       <m>\textcolor{green}{\text{This event is hybrid (in-person and online).}}</m> -->
+      <!--     </li> -->
+      <!--     <li> -->
+      <!--       <m>\textcolor{orange}{\text{A recording has been made available.}}</m> -->
+      <!--     </li> -->
+      <!--   </ul> -->
+      <!-- </p> -->
     </introduction>
     <xi:include href="./2025.ptx" />
     <xi:include href="./2024.ptx" />
