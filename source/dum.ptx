@@ -1,5 +1,5 @@
-<section  xml:id="Calendar-Year-2025">
-  <title> 2025 History of Mathematics Events  </title>
+<section  xml:id="dum">
+  <title> Dum  </title>
   <p>
     <dl>
       <li>
@@ -600,19 +600,26 @@
         </p>
       </li> 
       <li>
-        <title>Date</title>
-
-        <p>
-
+        <title>lsdkj</title>
+        <p><url href="https://homepage.villanova.edu/alan.gluchoff/PASHoM/"
+                visual="homepage.villanova.edu/alan.gluchoff/PASHoM/"> Philadelphia
+        Area Seminar on the History of Mathematics (PASHoM), Villanova
+        University
+      </url>
         </p>
+        <p>
+          <m>\textcolor{blue}{\text{This talk will be online only.}}</m>
+        </p>
+        <p>
+        All seminar talks will begin at 6:30 pm ET</p>
         <p>
           For more information contact 
         </p>
       </li>
-</dl>
-  </p>
-</section>
+    </dl>
+    </p>
+  </section>
 
-<!-- Local Variables: -->
-<!-- eval:(load-file "~/lisp/Calendar-minor-mode.el")  -->
-<!-- End: -->
+  <!-- Local Variables: -->
+  <!-- eval:(load-file "~/lisp/Calendar-minor-mode.el")  -->
+  <!-- End: -->

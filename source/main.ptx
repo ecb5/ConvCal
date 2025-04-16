@@ -3,70 +3,37 @@
   <docinfo>
   </docinfo>
   <article xml:id="ConvergenceCalendar">
-    <title> Calendar of Events in the History of  Mathematics</title>
-    <subtitle>Provided by <pubtitle>Convergence</pubtitle>, an online journal of the MAA</subtitle>
-    
-          <!-- <li> -->
-          <!--   <title>Date Goes Here</title> -->
-          <!--   <p> -->
-          <!--     <url -->
-          <!--      href="Event" -->
-          <!--      visual="Event">, -->
-          <!--      Affiliation -->
-          <!--     </url> -->
-          <!--   </p> -->
-          <!--   <p> -->
+    <title>History of  Mathematics Events Calendar </title>
+    <!-- <subtitle>Maintained by the MAA Special Interest Group for the History of Mathematics (HoM SIGMAA)</subtitle> -->
+    <introduction>
+      <p>
+        If you would like us to list your event contact one of the HoM SIGMAA officers or send an email to: 
+        <url href="mailto:historyofmathcalendar@gmail.com" 
+             visual="mailto:historyofmathcalendar@gmail.com">
+        historyofmathcalendar@gmail.com</url>
+      </p>
 
-<introduction>
-<p>
-Entries are tagged as follows:
+      <p>
+        Entries are tagged as follows:
+        <ul>
+          <li>
+            <m>\textcolor{blue}{\text{This event will be online only.}}</m>
 
-<ul>
-
-<li>
-
-              <m>\textcolor{blue}{\text{This event will be online only.}}</m>
-
-</li>
-<li>
-
-              <m>\textcolor{red}{\text{This event has been cancelled.}}</m>
-</li>
-<li>
-
-
-  <m>\textcolor{green}{\text{This event is hybrid (in-person and online).}}</m>
-</li>
-<li>
-
-
-              <m>\textcolor{orange}{\text{A recording has been made available.}}</m>
-
-</li>
-
-</ul>
-
-</p>
-</introduction>
-
-          <!--   </p> -->
-          <!--   <p> -->
-          <!--     Description of event -->
-          <!--   </p> -->
-          <!--   <p> -->
-          <!--     Contact Information -->
-          <!--   </p> -->
-          <!-- </li> -->
-    
-
-
-<xi:include href="./2025.ptx" />
-<xi:include href="./2024.ptx" />
-<!-- <xi:include href="./dum.ptx" /> -->
-
+          </li>
+          <li>
+            <m>\textcolor{red}{\text{This event has been cancelled.}}</m>
+          </li>
+          <li>
+            <m>\textcolor{green}{\text{This event is hybrid (in-person and online).}}</m>
+          </li>
+          <li>
+            <m>\textcolor{orange}{\text{A recording has been made available.}}</m>
+          </li>
+        </ul>
+      </p>
+    </introduction>
+    <xi:include href="./2025.ptx" />
+    <xi:include href="./2024.ptx" />
+    <!-- <xi:include href="./dum.ptx" /> -->
   </article>
 </pretext>
-
-
-
-
