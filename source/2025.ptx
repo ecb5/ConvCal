@@ -228,14 +228,17 @@
         <title>February 22, 2025</title>
 
         <p>
-          
-          <url href="https://www.bshm.ac.uk/events/research-progress-5" visual="www.bshm.ac.uk/events/research-progress-5">Research in Progress Meeting</url>
-          , British Society for the History of Mathematics, Queen’s College, Oxford, England
+          <url href="https://www.bshm.ac.uk/" visual="www.bshm.ac.uk/">British Society for the History of Mathematics</url>, 
+          <url href="https://www.bshm.ac.uk/events/research-progress-5" visual="www.bshm.ac.uk/events/research-progress-5">Research in Progress Meeting</url>, Queen’s College, Oxford, England
         </p>
         <p>
-          BSHM’s annual meeting that provides an opportunity for graduate students in any area of the history of mathematics to present their work to a friendly and supportive audience. Abstracts are due to 
-          <url href="mailto: christopher.hollings@maths.ox.ac.uk" visual="christopher.hollings@maths.ox.ac.uk">Christopher Hollings</url>
-          by 30 November 2024.
+          BSHM’s annual meeting that provides an opportunity for
+          graduate students in any area of the history of mathematics
+          to present their work to a friendly and supportive
+          audience. Abstracts are due to <url href="mailto:
+          christopher.hollings@maths.ox.ac.uk"
+          visual="christopher.hollings@maths.ox.ac.uk">Christopher
+          Hollings</url> by 30 November 2024.
         </p>
 
       </li>
@@ -742,6 +745,8 @@
             </ul>
           </p>
         </li> 
-    </dl>
-  </p>
-</section>
+
+
+      </dl>
+    </p>
+  </section>
