@@ -32,6 +32,7 @@
       <!--   </ul> -->
       <!-- </p> -->
     </introduction>
+    <xi:include href="./2026.ptx" />
     <xi:include href="./2025.ptx" />
     <xi:include href="./2024.ptx" />
     <!-- <xi:include href="./dum.ptx" /> -->
