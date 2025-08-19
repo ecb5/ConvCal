@@ -3,740 +3,7 @@
 @import "https://fonts.googleapis.com/css2?family=PT Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Inconsolata:ital,wght@0,400..700;1,400..700&display=swap";
 
-/* ../../css/targets/html/default-modern/theme-default-modern.scss */
-:root {
-  --base-content-width: 600px;
-  --content-padding: 48px;
-}
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-body.pretext {
-  color: var(--body-text-color);
-  font-family: var(--font-body);
-}
-.ptx-page {
-  position: relative;
-  display: flex;
-  flex-grow: 1;
-  width: 100%;
-}
-.ptx-main {
-  flex-grow: 1;
-  position: relative;
-  max-width: 100%;
-  container-name: ptx-main;
-  container-type: inline-size;
-}
-.ptx-main .ptx-content {
-  max-width: 696px;
-  padding: 24px 48px 60px;
-}
-.worksheet .ptx-main .ptx-content {
-  max-width: 960px;
-}
-.ptx-page {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-body.pretext,
-body.standalone {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  background: var(--page-color, white);
-}
-body.pretext > a.assistive {
-  padding: 6px;
-  position: absolute;
-  top: -40px;
-  left: 0px;
-  color: white;
-  border-right: 1px solid white;
-  border-bottom: 1px solid white;
-  border-bottom-right-radius: 8px;
-  background: #BF1722;
-  z-index: 10000;
-}
-body.pretext > a.assistive:focus {
-  top: 0px;
-  outline: 0;
-  transition: top 0.1s ease-in, background 0.5s linear;
-}
-.ptx-content-footer {
-  display: flex;
-  justify-content: space-around;
-  max-width: 696px;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  padding-left: 48px;
-  padding-right: 48px;
-}
-.ptx-content-footer .button {
-  font: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-  gap: 10px;
-  min-height: 34px;
-  color: var(--button-text-color);
-  background-color: var(--button-background);
-  border-width: 1px;
-  border-color: var(--button-border-color);
-  border-style: solid;
-  border-radius: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: pointer;
-  user-select: none;
-}
-.ptx-content-footer .button:hover:not(.disabled) {
-  color: var(--button-hover-text-color);
-  background-color: var(--button-hover-background);
-}
-.ptx-content-footer .button:focus-visible {
-  outline: 2px solid var(--button-text-color);
-  outline-offset: -2px;
-}
-.ptx-content-footer .button.disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-.ptx-content-footer .button.hidden {
-  display: none;
-}
-.ptx-content-footer .button.open {
-  color: var(--button-hover-text-color);
-  background-color: var(--button-hover-background);
-}
-.ptx-content-footer .button .icon {
-  margin: 0 -7px;
-}
-.ptx-masthead {
-  position: relative;
-  background: var(--banner-background);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.ptx-masthead .ptx-banner {
-  border-top: 1px solid transparent;
-  overflow: hidden;
-  padding: 10px 10px;
-  border-bottom: none;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  max-width: 1200px;
-}
-.ptx-masthead a {
-  color: var(--doc-title-color, #2a5ea4);
-}
-.ptx-masthead a:active {
-  color: var(--link-active-text-color);
-}
-.ptx-masthead .title-container {
-  font-family: var(--font-headings);
-  font-size: 2em;
-  padding-left: 9.68px;
-  overflow: hidden;
-  flex: 1;
-}
-.ptx-masthead .title-container .heading {
-  font-weight: 700;
-  font-size: 100%;
-  line-height: 1.25em;
-}
-.ptx-masthead .title-container .title:has(+ .subtitle)::after {
-  content: ":";
-}
-.ptx-masthead .title-container .subtitle {
-  font-weight: normal;
-}
-.ptx-masthead .logo-link {
-  height: 5em;
-  display: flex;
-}
-.ptx-masthead .logo-link img {
-  max-height: 100%;
-}
-.ptx-masthead .logo-link img[src$=".svg"] {
-  height: 100%;
-}
-.ptx-masthead .byline {
-  color: var(--byline-color);
-  font-weight: normal;
-  margin: 0;
-  font-size: 62.5%;
-  min-height: inherit;
-}
-@media screen and (max-width: 800px) {
-  .ptx-masthead {
-    border-bottom: 1px solid var(--page-border-color);
-  }
-  .ptx-masthead .ptx-banner {
-    padding: 10px 28px;
-    display: flex;
-    justify-content: center;
-  }
-  .ptx-masthead .logo-link::before {
-    font-size: 1rem;
-    margin-top: 0;
-  }
-  .ptx-masthead .title-container {
-    width: fit-content;
-    flex: unset;
-  }
-  .ptx-masthead .title-container .heading {
-    line-height: 1em;
-  }
-  .ptx-masthead .title-container .heading .subtitle {
-    display: block;
-    font-size: 80%;
-    line-height: 1em;
-  }
-  .ptx-masthead .byline {
-    font-size: 50%;
-  }
-}
-@media screen and (width <= 480px) {
-  .ptx-masthead .title-container {
-    padding: 0;
-    text-align: center;
-    font-size: 1em;
-  }
-  .ptx-masthead .logo-link {
-    display: none;
-  }
-  .ptx-masthead .byline {
-    display: none;
-  }
-}
-.ptx-navbar {
-  position: sticky;
-  top: 0;
-  height: 36px;
-  width: 100%;
-  background: var(--navbar-background);
-  border: 0;
-  border-top: 1px solid var(--page-border-color);
-  border-bottom: 1px solid var(--page-border-color);
-  margin: 0;
-  z-index: 500;
-  overflow: visible;
-  display: flex;
-}
-.ptx-navbar .ptx-navbar-contents {
-  position: relative;
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.ptx-navbar .button {
-  font: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-  gap: 10px;
-  min-height: 34px;
-  color: var(--button-text-color);
-  background-color: var(--button-background);
-  border-width: 1px;
-  border-color: var(--button-border-color);
-  border-style: solid;
-  border-radius: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: pointer;
-  user-select: none;
-}
-.ptx-navbar .button:hover:not(.disabled) {
-  color: var(--button-hover-text-color);
-  background-color: var(--button-hover-background);
-}
-.ptx-navbar .button:focus-visible {
-  outline: 2px solid var(--button-text-color);
-  outline-offset: -2px;
-}
-.ptx-navbar .button.disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-.ptx-navbar .button.hidden {
-  display: none;
-}
-.ptx-navbar .button.open {
-  color: var(--button-hover-text-color);
-  background-color: var(--button-hover-background);
-}
-.ptx-navbar .button {
-  height: 100%;
-  border-width: 0;
-}
-.ptx-navbar .toc-toggle {
-  width: 240px;
-  gap: 0.4em;
-  margin-left: 0;
-}
-.ptx-navbar :is(.treebuttons, .nav-runestone-controls, .nav-other-controls) {
-  display: flex;
-}
-.ptx-navbar .treebuttons {
-  flex: 1 1 210px;
-  justify-content: end;
-}
-.ptx-navbar .nav-runestone-controls {
-  flex: 1 1 70px;
-  justify-content: end;
-}
-.ptx-navbar .pretext .navbar .dropdown {
-  height: 34px;
-}
-.ptx-navbar .embed-popup {
-  padding: 10px;
-  background-color: var(--navbar-background);
-  position: absolute;
-  margin-top: 36px;
-  border: 1px solid var(--page-border-color);
-  border-radius: 3px;
-  box-shadow: 0 0 5px var(--primary-color-gray-80);
-}
-.ptx-navbar .embed-popup .embed-code-container {
-  width: "100%";
-  padding: 5px;
-}
-.ptx-navbar .embed-popup .embed-code-container .embed-code-textbox {
-  width: 100%;
-  padding: 10px;
-  height: 5em;
-}
-.ptx-navbar .treebuttons > * {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 75px;
-}
-.ptx-navbar .treebuttons .icon {
-  margin: 0 -7px;
-}
-.ptx-navbar :is(.index-button) .icon {
-  display: none;
-}
-.ptx-navbar :is(.runestone-profile, .activecode-toggle, .searchbutton, .calculator-toggle, .light-dark-button, .embed-button) .name {
-  display: none;
-}
-.ptx-navbar .index-button {
-  min-width: 70px;
-}
-.runestone-profile {
-  position: relative;
-}
-.runestone-profile .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--dropdown-background);
-  min-width: 160px;
-  z-index: 100;
-  border: 1px solid var(--dropdown-border-color);
-  right: 0;
-  top: 35px;
-  text-align: start;
-  padding: 0;
-}
-.runestone-profile .dropdown-content a {
-  display: block;
-  text-decoration: none;
-  color: var(--dropdown-text-color);
-  padding: 2px 8px;
-}
-.runestone-profile .dropdown-content a:is(:hover, :focus-visible) {
-  background-color: var(--dropdown-hover-background);
-  color: var(--dropdown-hover-text-color);
-}
-.runestone-profile .dropdown-content hr {
-  color: var(--dropdown-border-color);
-  margin: 4px 0;
-}
-.runestone-profile:is(:hover, :focus-visible, :focus-within) {
-  overflow: visible;
-}
-.runestone-profile:is(:hover, :focus-visible, :focus-within) .dropdown-content {
-  display: block;
-}
-@media screen and (max-width: 800px) {
-  .ptx-navbar .button {
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-color: var(--page-border-color);
-  }
-  .ptx-navbar > *:not(:first-child) {
-    margin-left: -1px;
-  }
-  .ptx-navbar {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1100;
-    background: var(--button-border-color);
-    max-width: 100vw;
-  }
-  .ptx-navbar .ptx-navbar-contents {
-    max-width: 100vw;
-  }
-  .ptx-navbar .nav-runestone-controls {
-    flex: 0;
-  }
-  .ptx-navbar .toc-toggle {
-    flex: 2 1 100px;
-  }
-  .ptx-navbar .treebuttons {
-    flex: 3 1 150px;
-  }
-  .ptx-navbar .treebuttons > * {
-    flex: 1 1;
-    min-width: 35px;
-  }
-  .ptx-navbar .index-button {
-    display: none;
-  }
-  .ptx-navbar .embed-popup {
-    margin-top: unset;
-    bottom: 36px;
-  }
-  .ptx-navbar .dropdown-content {
-    top: unset;
-    bottom: 36px;
-  }
-  .ptx-navbar :is(.toc-toggle, .previous-button, .up-button, .next-button, .calculator-toggle, .index-button, .embed-button) .name {
-    display: none;
-  }
-}
-.ptx-sidebar {
-  align-self: flex-start;
-}
-.ptx-sidebar.visible {
-  display: block;
-}
-.ptx-sidebar.hidden {
-  display: none;
-  height: 0;
-}
-.ptx-toc {
-  --codenumber-pad-left: 0.3rem;
-  --codenumber-pad-right: 0.5rem;
-  --toc-indent-first: calc(1.0rem + var(--codenumber-pad-left) + var(--codenumber-pad-right));
-  --toc-indent-second: calc(1.7rem + var(--codenumber-pad-left) + var(--codenumber-pad-right));
-  --toc-indent-third: calc(2.2rem + var(--codenumber-pad-left) + var(--codenumber-pad-right));
-  background: var(--toc-background);
-  margin: 0;
-  font-size: 0.9rem;
-}
-.ptx-toc:is(.depth1, .parts.depth2) {
-  --codenumber-pad-right: 0.5rem;
-}
-.ptx-toc .toc-item-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  background: var(--tocitem-background);
-}
-.ptx-toc .toc-item-list .active {
-  list-style: none;
-}
-.ptx-toc .toc-item {
-  background-color: var(--tocitem-background);
-  color: var(--toc-text-color);
-  border-color: var(--toc-border-color);
-}
-.ptx-toc .toc-item a {
-  color: inherit;
-}
-.ptx-toc .toc-item.active:not(:has(.toc-item.active)) {
-  color: var(--tocitem-active-text-color) !important;
-  background-color: var(--tocitem-active-background) !important;
-  border-color: var(--tocitem-active-border-color) !important;
-}
-.ptx-toc .toc-item > .toc-title-box > a:is(:hover, :focus) {
-  color: var(--tocitem-highlight-text-color);
-  background-color: var(--tocitem-highlight-background);
-  border-color: var(--tocitem-highlight-border-color);
-}
-.ptx-toc .toc-title-box {
-  display: flex;
-}
-.ptx-toc .toc-title-box > .internal {
-  position: relative;
-  display: flex;
-  flex-grow: 1;
-  padding: 0.2em;
-  font-weight: 500;
-}
-.ptx-toc .toc-item-list .toc-item-list .toc-title-box > .internal {
-  font-weight: normal;
-}
-.ptx-toc .codenumber {
-  min-width: var(--toc-indent-first);
-  padding-left: var(--codenumber-pad-left);
-  padding-right: var(--codenumber-pad-right);
-  display: inline-block;
-  text-align: left;
-  flex-grow: 0;
-}
-.ptx-toc .toc-item {
-  color: var(--toclevel1-text-color);
-  background-color: var(--toclevel1-background);
-}
-.ptx-toc .toc-item .toc-item {
-  color: var(--toclevel2-text-color);
-  background-color: var(--toclevel2-background);
-}
-.ptx-toc .toc-item .toc-item .toc-item {
-  color: var(--toclevel3-text-color);
-  background-color: var(--toclevel3-background);
-}
-.book .ptx-toc .toc-chapter .toc-item-list .codenumber,
-.article .ptx-toc .toc-section .toc-item-list .codenumber,
-.ptx-toc .toc-backmatter .toc-item-list .codenumber {
-  font-size: 80%;
-  padding-top: 0.16em;
-  min-width: var(--toc-indent-second);
-}
-.book .ptx-toc .toc-chapter .toc-item-list .toc-item-list .codenumber,
-.article .ptx-toc .toc-section .toc-item-list .toc-item-list .codenumber,
-.ptx-toc .toc-backmatter .toc-item-list .toc-item-list .codenumber {
-  min-width: var(--toc-indent-third);
-  visibility: hidden;
-}
-.ptx-toc .toc-item-list .toc-item-list .toc-item-list a:is(:hover, :focus) > .codenumber {
-  visibility: visible;
-}
-.ptx-toc .toc-item .toc-title-box .title {
-  margin-left: var(--toc-indent-first);
-}
-.book .ptx-toc .toc-chapter .toc-item-list .title,
-.article .ptx-toc .toc-section .toc-item-list .title,
-.ptx-toc .toc-backmatter .toc-item-list .title {
-  margin-left: var(--toc-indent-second);
-}
-.book .ptx-toc .toc-chapter .toc-item-list .toc-item-list .title,
-.article .ptx-toc .toc-section .toc-item-list .toc-item-list .title,
-.ptx-toc .toc-backmatter .toc-item-list .toc-item-list .title {
-  margin-left: var(--toc-indent-third);
-}
-.ptx-toc .toc-item > .toc-title-box .codenumber + .title {
-  margin-left: 0 !important;
-}
-.ptx-toc .toc-chapter .toc-item-list .title,
-.ptx-toc .toc-section .toc-item-list .title,
-.ptx-toc .toc-backmatter .toc-item-list .toc-item-list .title {
-  font-size: 90%;
-}
-.ptx-toc .toc-chapter .toc-item-list .toc-item-list .title,
-.ptx-toc .toc-section .toc-item-list .toc-item-list .title,
-.ptx-toc .toc-backmatter .toc-item-list .toc-item-list .toc-item-list .title {
-  font-style: italic;
-}
-.ptx-toc.depth0 ul.structural {
-  display: none;
-}
-.ptx-toc.depth1 ul.structural ul.structural {
-  display: none;
-}
-.ptx-toc.depth2 ul.structural ul.structural ul.structural {
-  display: none;
-}
-.ptx-toc.depth3 ul.structural ul.structural ul.structural ul.structural {
-  display: none;
-}
-.ptx-toc.depth4 ul.structural ul.structural ul.structural ul.structural ul.structural {
-  display: none;
-}
-.ptx-toc.depth1 ul.structural .toc-item.contains-active {
-  background-color: var(--tocitem-active-backgrounde);
-  color: var(--tocitem-active-text-color);
-}
-.ptx-toc.depth2 ul.structural ul.structural .toc-item.contains-active {
-  background-color: var(--tocitem-active-background);
-  color: var(--tocitem-active-text-color);
-}
-.ptx-toc.focused {
-}
-.ptx-toc.focused ul.structural:not(.contains-active) > .toc-item {
-  display: none;
-}
-.ptx-toc.focused ul.structural:not(.contains-active) > .toc-item.visible {
-  display: block;
-}
-.ptx-toc.focused ul.structural .toc-item.active > ul.structural > .toc-item {
-  display: block;
-}
-.ptx-toc.focused ul.structural .toc-item.active > ul.structural > .toc-item.hidden {
-  display: none;
-}
-.ptx-toc.focused .toc-expander {
-  border: 0;
-  padding: 2px 5px;
-  background: inherit;
-  color: inherit;
-  display: flex;
-  align-items: center;
-}
-.ptx-toc.focused .toc-expander .icon {
-  font-size: 1.25em;
-  line-height: 18px;
-  font-variation-settings: "wght" 200;
-}
-.ptx-toc.focused .toc-expander:is(:hover) {
-  background-color: var(--tocitem-highlight-background);
-  color: var(--tocitem-highlight-text-color);
-}
-.ptx-toc.focused .toc-expander:is(:hover) .icon {
-  fill: var(--tocitem-highlight-text-color);
-}
-.ptx-toc.focused .toc-item > .toc-title-box > .toc-expander > .icon:before {
-  content: "add";
-}
-.ptx-toc.focused .toc-item.expanded > .toc-title-box > .toc-expander > .icon:before {
-  content: "remove";
-}
-.ptx-sidebar {
-  flex: 0 0 240px;
-  position: sticky;
-  top: 36px;
-  overflow-y: hidden;
-}
-.ptx-toc {
-  position: sticky;
-  top: 36px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: calc(100vh - 36px);
-  margin-top: -1px;
-}
-.ptx-toc > .toc-item-list:first-child > .toc-item:last-child {
-  border-bottom: 3px solid var(--toc-border-color);
-}
-@media screen and (max-width: 936px) {
-  .ptx-sidebar {
-    display: none;
-    position: sticky;
-    top: 36px;
-    background: var(--content-background);
-    min-height: 30vh;
-    border-right: 2px solid var(--toc-border-color);
-    border-bottom: 2px solid var(--toc-border-color);
-    width: 240px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .ptx-sidebar {
-    position: fixed;
-    z-index: 1000;
-    top: unset;
-    height: auto;
-    max-height: 80vh;
-    max-width: 80vw;
-    bottom: 36px;
-    border-right: 2px solid var(--toc-border-color);
-    border-top: 2px solid var(--toc-border-color);
-  }
-  .ptx-toc {
-    border-top: 2px solid var(--toc-border-color);
-    border-bottom: 0;
-    max-height: 80vh;
-  }
-}
-.ptx-page-footer {
-  background: var(--footer-background);
-  padding-top: 0;
-  border-top: 2px solid var(--page-border-color);
-  border-bottom: 2px solid var(--page-border-color);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  gap: 90px;
-  position: relative;
-}
-.ptx-page-footer > a {
-  margin: 1em 0;
-  color: var(--body-text-color);
-}
-.ptx-page-footer > a > .logo:first-child {
-  height: 3em;
-  width: unset;
-  margin: 0;
-}
-.ptx-page-footer .feedback-link {
-  font: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-  gap: 10px;
-  min-height: 34px;
-  color: var(--button-text-color);
-  background-color: var(--button-background);
-  border-width: 1px;
-  border-color: var(--button-border-color);
-  border-style: solid;
-  border-radius: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: pointer;
-  user-select: none;
-}
-.ptx-page-footer .feedback-link:hover:not(.disabled) {
-  color: var(--button-hover-text-color);
-  background-color: var(--button-hover-background);
-}
-.ptx-page-footer .feedback-link:focus-visible {
-  outline: 2px solid var(--button-text-color);
-  outline-offset: -2px;
-}
-.ptx-page-footer .feedback-link.disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-.ptx-page-footer .feedback-link.hidden {
-  display: none;
-}
-.ptx-page-footer .feedback-link.open {
-  color: var(--button-hover-text-color);
-  background-color: var(--button-hover-background);
-}
-@media screen and (max-width: 800px) {
-  .ptx-page-footer {
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 34px;
-  }
-  .ptx-page-footer > a > .logo:first-child {
-    height: 2em;
-  }
-}
-@container ptx-main (width < 696px) {
-  .ptx-page > .ptx-main .ptx-content {
-    padding-left: 28px;
-    padding-right: 28px;
-    max-width: calc(600px + 2 * 28px);
-  }
-}
+/* ../../css/targets/print-worksheet/print-worksheet.scss */
 .aside-like > .knowl__link {
   color: var(--aside-like-link-color);
   border-bottom-color: var(--aside-like-link-color);
@@ -1111,7 +378,7 @@ summary.knowl__link {
 .knowl__content {
   margin: 0.75em 0;
   border: 3px solid var(--knowl-border-color);
-  border-radius: 8px;
+  border-radius: 0;
   padding: 12px;
   background-color: var(--knowl-background);
 }
@@ -1136,173 +403,42 @@ summary.knowl__link {
   margin-left: 0;
   margin-right: 0;
 }
-.assemblage-like:not(.knowl__content, .born-hidden-knowl) {
-  border: 2px solid var(--assemblage-like-border-color);
-  background-color: var(--assemblage-like-body-background);
-  padding: 10px;
-  border-radius: 8px;
-}
-.assemblage-like:not(.knowl__content, .born-hidden-knowl) > .heading:first-child {
+.theorem-like > .heading,
+.definition-like > .heading,
+.example-like > .heading,
+.project-like > .heading,
+.remark-like > .heading,
+.openproblem-like > .heading,
+.computation-like > .heading {
   display: block;
-  color: var(--block-head-color);
-  margin-bottom: 0.5em;
+  font-size: 1.1em;
 }
-.assemblage-like:not(.knowl__content, .born-hidden-knowl) > *:first-child {
-  margin-top: 0;
+.proof {
+  padding-bottom: 1.5em;
 }
-.goal-like:not(.knowl__content, .born-hidden-knowl) {
-  border: 3px solid var(--goal-like-border-color);
-  background-color: var(--goal-like-body-background);
-  padding: 20px;
-  padding-top: calc(20px + 0.25ex);
-  margin-top: 2.5em !important;
+.proof::after {
+  content: "\25a1";
+  float: right;
 }
-.goal-like:not(.knowl__content, .born-hidden-knowl) > .heading:first-child {
-  background-color: var(--content-background);
-  display: block;
-  color: var(--block-head-color);
-  margin-bottom: 0.5em;
-  padding: 5px 10px;
-  margin-top: calc(-25px - 1.65ex);
-  width: fit-content;
-  border: 0;
+.proof .heading {
+  font-size: unset;
+  font-weight: bold;
+  font-style: italic;
 }
-.goal-like:not(.knowl__content, .born-hidden-knowl) > .heading:first-child:after {
-  display: none;
+.solution-like .heading {
+  display: inline;
+  font-style: italic;
+  font-size: unset;
 }
-.knowl__content *:first-child .goal-like {
-  margin-top: 1em;
+.goal-like {
+  border: none;
+  padding: 0;
 }
-.theorem-like:not(.knowl__content, .born-hidden-knowl),
-.definition-like:not(.knowl__content, .born-hidden-knowl),
-.example-like:not(.knowl__content, .born-hidden-knowl),
-.project-like:not(.knowl__content, .born-hidden-knowl),
-.remark-like:not(.knowl__content, .born-hidden-knowl),
-.openproblem-like:not(.knowl__content, .born-hidden-knowl),
-.computation-like:not(.knowl__content, .born-hidden-knowl) {
-  padding-left: 10px;
-  border-left: 2px solid var(--block-border-color);
-}
-.theorem-like:not(.knowl__content, .born-hidden-knowl) > .heading:first-child,
-.definition-like:not(.knowl__content, .born-hidden-knowl) > .heading:first-child,
-.example-like:not(.knowl__content, .born-hidden-knowl) > .heading:first-child,
-.project-like:not(.knowl__content, .born-hidden-knowl) > .heading:first-child,
-.remark-like:not(.knowl__content, .born-hidden-knowl) > .heading:first-child,
-.openproblem-like:not(.knowl__content, .born-hidden-knowl) > .heading:first-child,
-.computation-like:not(.knowl__content, .born-hidden-knowl) > .heading:first-child {
-  color: var(--block-head-color);
-}
-.theorem-like:not(.knowl__content, .born-hidden-knowl)::after,
-.definition-like:not(.knowl__content, .born-hidden-knowl)::after,
-.example-like:not(.knowl__content, .born-hidden-knowl)::after,
-.project-like:not(.knowl__content, .born-hidden-knowl)::after,
-.remark-like:not(.knowl__content, .born-hidden-knowl)::after,
-.openproblem-like:not(.knowl__content, .born-hidden-knowl)::after,
-.computation-like:not(.knowl__content, .born-hidden-knowl)::after {
-  content: "";
-  border-bottom: 2px solid var(--block-border-color);
-  display: block;
-  margin-right: auto;
-  margin-left: -10px;
-  padding-top: 10px;
-  width: 1.5em;
-}
-.knowl__content .theorem-like,
-.knowl__content .definition-like,
-.knowl__content .example-like,
-.knowl__content .project-like,
-.knowl__content .remark-like,
-.knowl__content .openproblem-like,
-.knowl__content .computation-like {
-  padding-left: 0;
-  border-left: 0;
-}
-.knowl__content .theorem-like::after,
-.knowl__content .definition-like::after,
-.knowl__content .example-like::after,
-.knowl__content .project-like::after,
-.knowl__content .remark-like::after,
-.knowl__content .openproblem-like::after,
-.knowl__content .computation-like::after {
-  display: none;
-}
-.project-like:not(.knowl__content, .born-hidden-knowl):not(.knowl__content, .born-hidden-knowl) {
-  padding-left: 10px;
-  border-left: 2px dotted var(--block-border-color);
-}
-.project-like:not(.knowl__content, .born-hidden-knowl):not(.knowl__content, .born-hidden-knowl) > .heading:first-child {
-  color: var(--block-head-color);
-}
-.project-like:not(.knowl__content, .born-hidden-knowl):not(.knowl__content, .born-hidden-knowl)::after {
-  content: "";
-  border-bottom: 2px dotted var(--block-border-color);
-  display: block;
-  margin-right: auto;
-  margin-left: -10px;
-  padding-top: 10px;
-  width: 1.5em;
-}
-.knowl__content .project-like:not(.knowl__content, .born-hidden-knowl) {
-  padding-left: 0;
-  border-left: 0;
-}
-.knowl__content .project-like:not(.knowl__content, .born-hidden-knowl)::after {
-  display: none;
-}
-.proof:not(.knowl__content, .born-hidden-knowl) {
-  padding-right: 10px;
-  border-right: 1px solid var(--block-border-color);
-}
-.proof:not(.knowl__content, .born-hidden-knowl) > .heading:first-child {
-  color: var(--block-head-color);
-}
-.proof:not(.knowl__content, .born-hidden-knowl)::after {
-  content: "";
-  border-bottom: 1px solid var(--block-border-color);
-  display: block;
-  margin-left: auto;
-  margin-right: -10px;
-  padding-top: 10px;
-  width: 1.5em;
-}
-.knowl__content .proof {
-  padding-right: 0;
-  border-right: 0;
-}
-.knowl__content .proof::after {
-  display: none;
-}
-.knowl__content .theorem-like,
-.knowl__content .definition-like,
-.knowl__content .example-like,
-.knowl__content .project-like,
-.knowl__content .remark-like,
-.knowl__content .openproblem-like,
-.knowl__content .computation-like,
-.knowl__content .project-like {
-  padding-left: 0;
-  margin-left: 0;
-  border-left: none;
-}
-.knowl__content .theorem-like::after,
-.knowl__content .definition-like::after,
-.knowl__content .example-like::after,
-.knowl__content .project-like::after,
-.knowl__content .remark-like::after,
-.knowl__content .openproblem-like::after,
-.knowl__content .computation-like::after,
-.knowl__content .project-like::after {
-  border-bottom: none;
-  display: none;
-}
-section.solutions:not(:is(:first-child)):not(.knowl__content, .born-hidden-knowl) {
-  padding: 10px;
-  padding-left: 15px;
-  border-left: 10px solid var(--page-border-color);
-  background-color: var(--content-background);
-}
-section.solutions:not(:is(:first-child)):not(.knowl__content, .born-hidden-knowl) > .heading:first-child {
-  margin-top: 0;
+.goal-like > .heading {
+  margin-top: -0.5em;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1em;
 }
 .paragraphs > .heading:first-child,
 article > .heading:first-child {
@@ -3312,99 +2448,6 @@ label.incorrect .feedback {
     Times,
     serif;
 }
-.ptx-toc:is(.depth0, .depth1, .depth2) .toc-item .toc-item {
-  background-color: var(--tocitem-background);
-  color: var(--toc-text-color);
-}
-.ptx-toc:is(.depth0, .depth1, .depth2, .depth3) .toc-item .toc-item .toc-item {
-  background-color: var(--tocitem-background);
-  color: var(--toc-text-color);
-}
-.toc-item {
-  border-top: 1px solid var(--toc-border-color);
-}
-.ptx-toc.focused .toc-title-box > a:hover {
-  border-right: 1px solid var(--toc-border-color);
-}
-.ptx-toc.focused .toc-expander:is(:hover) {
-  border-left: 1px solid var(--toc-border-color);
-}
-.ptx-toc > .toc-item-list > .toc-item {
-  border-top: 2px solid var(--toc-border-color);
-}
-.ptx-toc.focused .toc-item > .toc-title-box > .toc-expander > .icon {
-  font-size: 30px;
-}
-.ptx-toc.focused .toc-item > .toc-title-box > .toc-expander > .icon:before {
-  content: "chevron_left";
-}
-.ptx-toc.focused .toc-item.expanded > .toc-title-box > .toc-expander > .icon {
-  transform: rotate(-90deg);
-}
-.ptx-toc.focused .toc-item.expanded > .toc-title-box > .toc-expander > .icon:before {
-  content: "chevron_left";
-}
-section > .heading {
-  padding-bottom: 3px;
-  border-bottom: 2px solid var(--primary-color-white-30);
-}
-section > h2.heading {
-  border-bottom-width: 4px;
-}
-section > h3.heading {
-  border-bottom-width: 3px;
-}
-:root.dark-mode section > .heading {
-  border-bottom-color: var(--primary-color-black-30);
-}
-.displaymath {
-  overflow-x: auto;
-}
-@container ptx-main (width > 696px) {
-  .displaymath {
-    --max-width: calc(min((100cqw - 2 * 48px), 900px));
-    min-width: 100%;
-    clear: right;
-    width: fit-content;
-    max-width: var(--max-width);
-  }
-}
-.code-display {
-  overflow-x: auto;
-}
-@container ptx-main (width > 696px) {
-  .code-display {
-    --max-width: calc(min((100cqw - 2 * 48px), 900px));
-    min-width: 100%;
-    clear: right;
-    width: fit-content;
-    max-width: var(--max-width);
-  }
-}
-.ptx-runestone-container:has(.parsons_section, .ac_section, .codelens) {
-  overflow-x: auto;
-}
-@container ptx-main (width > 696px) {
-  .ptx-runestone-container:has(.parsons_section, .ac_section, .codelens) {
-    --max-width: calc(min((100cqw - 2 * 48px), 900px));
-    min-width: 100%;
-    clear: right;
-    width: var(--max-width);
-    max-width: var(--max-width);
-  }
-}
-.tabular-box {
-  overflow-x: auto;
-}
-@container ptx-main (width > 696px) {
-  .tabular-box {
-    --max-width: calc(min((100cqw - 2 * 48px), 900px));
-    min-width: 100%;
-    clear: right;
-    width: fit-content;
-    max-width: var(--max-width);
-  }
-}
 :root {
   color-scheme: light;
 }
@@ -3417,274 +2460,31 @@ section > h3.heading {
   --banner-background: #fafafa;
   --navbar-background: #ededed;
   --footer-background: var(--banner-background);
-  --toc-border-color: var(--primary-color-white-30);
+  --toc-border-color: var(--primary-color-white-80);
   --toc-background: var(--content-background);
   --tocitem-background: var(--toc-background);
-  --toc-text-color: var(--body-text-color);
-  --tocitem-highlight-background: var(--secondary-color-white-10);
+  --toc-text-color: var(--primary-color-black-30);
+  --tocitem-highlight-background: var(--primary-color-white-15);
   --tocitem-highlight-text-color: white;
   --tocitem-highlight-border-color: var(--toc-border-color);
-  --tocitem-active-background: var(--secondary-color);
+  --tocitem-active-background: var(--primary-color-white-15);
   --tocitem-active-text-color: white;
   --tocitem-active-border-color: var(--toc-border-color);
-  --toclevel1-background: var(--primary-color);
-  --toclevel1-text-color: white;
-  --toclevel2-background: var(--primary-color-white-10);
-  --toclevel2-text-color: var(--toclevel1-text-color);
-  --toclevel3-background: var(--content-background);
+  --toclevel1-background: var(--content-background);
+  --toclevel1-text-color: var(--toc-text-color);
+  --toclevel2-background: var(--primary-color-white-95);
+  --toclevel2-text-color: var(--toc-text-color);
+  --toclevel3-background: var(--primary-color-white-90);
   --toclevel3-text-color: var(--toc-text-color);
   --body-text-color: #000;
-  --body-title-color: #000;
+  --body-title-color: var(--primary-color-black-20);
   --ptx-image-bg: transparent;
-  --activated-content-bg: #fae6e3;
+  --activated-content-bg: rgba(241, 185, 255, 0.3);
   --summary-link-background: var(--button-background);
   --summary-link-text-color: var(--button-text-color);
   --summary-link-hover-background: var(--button-hover-background);
   --summary-link-hover-text-color: var(--button-hover-text-color);
   --link-text-color: var(--primary-color);
-  --link-background: var(--primary-color-white-97);
-  --link-active-text-color: var(--primary-color-black-20);
-  --link-active-background: var(--link-background);
-  --link-alt-text-color: var(--secondary-color-black-10);
-  --link-alt-background: var(--secondary-color-white-97);
-  --link-alt-active-text-color: var(--link-alt-text-color);
-  --link-alt-active-background: var(--secondary-color-white-97);
-  --knowl-link-color: var(--link-text-color);
-  --knowl-background: var(--primary-color-white-97);
-  --knowl-border-color: var(--primary-color-white-30);
-  --knowl-nested-1-background: var(--secondary-color-white-97);
-  --knowl-nested-2-background: var(--primary-color-white-97);
-  --knowl-nested-3-background: var(--secondary-color-white-97);
-  --knowl-nested-4-background: var(--primary-color-white-97);
-  --block-body-background: var(--content-background);
-  --block-border-color: var(--knowl-border-color);
-  --block-head-color: var(--body-text-color);
-  --aside-like-link-color: var(--link-text-color);
-  --button-background: #ededed;
-  --button-text-color: #333333;
-  --button-border-color: #ccc;
-  --button-hover-background: #c7c7c7;
-  --button-hover-text-color: var(--button-text-color);
-  --code-inline: #ededed;
-  --dropdown-background: var(--content-background);
-  --dropdown-border-color: var(--toc-border-color);
-  --dropdown-text-color: var(--toc-text-color);
-  --dropdown-hover-background: var(--tocitem-active-background);
-  --dropdown-hover-text-color: var(--tocitem-active-text-color);
-  --assemblage-like-body-background: var(--knowl-background);
-  --assemblage-like-border-color: var(--knowl-border-color);
-  --definition-like-body-background: var(--block-body-background);
-  --definition-like-border-color: var(--block-border-color);
-  --theorem-like-body-background: var(--block-body-background);
-  --theorem-like-border-color: var(--block-border-color);
-  --axiom-like-body-background: var(--block-body-background);
-  --axiom-like-border-color: var(--block-border-color);
-  --remark-like-body-background: var(--block-body-background);
-  --remark-like-border-color: var(--block-border-color);
-  --computation-like-body-background: var(--block-body-background);
-  --computation-like-border-color: var(--block-border-color);
-  --openproblem-like-body-background: var(--block-body-background);
-  --openproblem-like-border-color: var(--block-border-color);
-  --aside-like-body-background: var(--knowl-background);
-  --aside-like-border-color: var(--knowl-border-color);
-  --proof-like-body-background: var(--block-body-background);
-  --proof-like-border-color: var(--block-border-color);
-  --example-like-body-background: var(--block-body-background);
-  --example-like-border-color: var(--block-border-color);
-  --project-like-body-background: var(--block-body-background);
-  --project-like-border-color: var(--block-border-color);
-  --goal-like-body-background: var(--block-body-background);
-  --goal-like-border-color: var(--secondary-color-white-20);
-  --solution-like-body-background: var(--block-body-background);
-  --solution-like-border-color: var(--block-border-color);
-  --primary-color-white-1: color-mix(in oklab, var(--primary-color), white 1%);
-  --primary-color-white-2: color-mix(in oklab, var(--primary-color), white 2%);
-  --primary-color-white-3: color-mix(in oklab, var(--primary-color), white 3%);
-  --primary-color-white-4: color-mix(in oklab, var(--primary-color), white 4%);
-  --primary-color-white-5: color-mix(in oklab, var(--primary-color), white 5%);
-  --primary-color-white-10: color-mix(in oklab, var(--primary-color), white 10%);
-  --primary-color-white-15: color-mix(in oklab, var(--primary-color), white 15%);
-  --primary-color-white-20: color-mix(in oklab, var(--primary-color), white 20%);
-  --primary-color-white-25: color-mix(in oklab, var(--primary-color), white 25%);
-  --primary-color-white-30: color-mix(in oklab, var(--primary-color), white 30%);
-  --primary-color-white-35: color-mix(in oklab, var(--primary-color), white 35%);
-  --primary-color-white-40: color-mix(in oklab, var(--primary-color), white 40%);
-  --primary-color-white-50: color-mix(in oklab, var(--primary-color), white 50%);
-  --primary-color-white-60: color-mix(in oklab, var(--primary-color), white 60%);
-  --primary-color-white-65: color-mix(in oklab, var(--primary-color), white 65%);
-  --primary-color-white-70: color-mix(in oklab, var(--primary-color), white 70%);
-  --primary-color-white-75: color-mix(in oklab, var(--primary-color), white 75%);
-  --primary-color-white-80: color-mix(in oklab, var(--primary-color), white 80%);
-  --primary-color-white-85: color-mix(in oklab, var(--primary-color), white 85%);
-  --primary-color-white-90: color-mix(in oklab, var(--primary-color), white 90%);
-  --primary-color-white-95: color-mix(in oklab, var(--primary-color), white 95%);
-  --primary-color-white-96: color-mix(in oklab, var(--primary-color), white 96%);
-  --primary-color-white-97: color-mix(in oklab, var(--primary-color), white 97%);
-  --primary-color-white-98: color-mix(in oklab, var(--primary-color), white 98%);
-  --primary-color-white-99: color-mix(in oklab, var(--primary-color), white 99%);
-  --primary-color-black-1: color-mix(in oklab, var(--primary-color), black 1%);
-  --primary-color-black-2: color-mix(in oklab, var(--primary-color), black 2%);
-  --primary-color-black-3: color-mix(in oklab, var(--primary-color), black 3%);
-  --primary-color-black-4: color-mix(in oklab, var(--primary-color), black 4%);
-  --primary-color-black-5: color-mix(in oklab, var(--primary-color), black 5%);
-  --primary-color-black-10: color-mix(in oklab, var(--primary-color), black 10%);
-  --primary-color-black-15: color-mix(in oklab, var(--primary-color), black 15%);
-  --primary-color-black-20: color-mix(in oklab, var(--primary-color), black 20%);
-  --primary-color-black-25: color-mix(in oklab, var(--primary-color), black 25%);
-  --primary-color-black-30: color-mix(in oklab, var(--primary-color), black 30%);
-  --primary-color-black-35: color-mix(in oklab, var(--primary-color), black 35%);
-  --primary-color-black-40: color-mix(in oklab, var(--primary-color), black 40%);
-  --primary-color-black-50: color-mix(in oklab, var(--primary-color), black 50%);
-  --primary-color-black-60: color-mix(in oklab, var(--primary-color), black 60%);
-  --primary-color-black-65: color-mix(in oklab, var(--primary-color), black 65%);
-  --primary-color-black-70: color-mix(in oklab, var(--primary-color), black 70%);
-  --primary-color-black-75: color-mix(in oklab, var(--primary-color), black 75%);
-  --primary-color-black-80: color-mix(in oklab, var(--primary-color), black 80%);
-  --primary-color-black-85: color-mix(in oklab, var(--primary-color), black 85%);
-  --primary-color-black-90: color-mix(in oklab, var(--primary-color), black 90%);
-  --primary-color-black-95: color-mix(in oklab, var(--primary-color), black 95%);
-  --primary-color-black-96: color-mix(in oklab, var(--primary-color), black 96%);
-  --primary-color-black-97: color-mix(in oklab, var(--primary-color), black 97%);
-  --primary-color-black-98: color-mix(in oklab, var(--primary-color), black 98%);
-  --primary-color-black-99: color-mix(in oklab, var(--primary-color), black 99%);
-  --primary-color-gray-1: color-mix(in oklab, var(--primary-color), gray 1%);
-  --primary-color-gray-2: color-mix(in oklab, var(--primary-color), gray 2%);
-  --primary-color-gray-3: color-mix(in oklab, var(--primary-color), gray 3%);
-  --primary-color-gray-4: color-mix(in oklab, var(--primary-color), gray 4%);
-  --primary-color-gray-5: color-mix(in oklab, var(--primary-color), gray 5%);
-  --primary-color-gray-10: color-mix(in oklab, var(--primary-color), gray 10%);
-  --primary-color-gray-15: color-mix(in oklab, var(--primary-color), gray 15%);
-  --primary-color-gray-20: color-mix(in oklab, var(--primary-color), gray 20%);
-  --primary-color-gray-25: color-mix(in oklab, var(--primary-color), gray 25%);
-  --primary-color-gray-30: color-mix(in oklab, var(--primary-color), gray 30%);
-  --primary-color-gray-35: color-mix(in oklab, var(--primary-color), gray 35%);
-  --primary-color-gray-40: color-mix(in oklab, var(--primary-color), gray 40%);
-  --primary-color-gray-50: color-mix(in oklab, var(--primary-color), gray 50%);
-  --primary-color-gray-60: color-mix(in oklab, var(--primary-color), gray 60%);
-  --primary-color-gray-65: color-mix(in oklab, var(--primary-color), gray 65%);
-  --primary-color-gray-70: color-mix(in oklab, var(--primary-color), gray 70%);
-  --primary-color-gray-75: color-mix(in oklab, var(--primary-color), gray 75%);
-  --primary-color-gray-80: color-mix(in oklab, var(--primary-color), gray 80%);
-  --primary-color-gray-85: color-mix(in oklab, var(--primary-color), gray 85%);
-  --primary-color-gray-90: color-mix(in oklab, var(--primary-color), gray 90%);
-  --primary-color-gray-95: color-mix(in oklab, var(--primary-color), gray 95%);
-  --primary-color-gray-96: color-mix(in oklab, var(--primary-color), gray 96%);
-  --primary-color-gray-97: color-mix(in oklab, var(--primary-color), gray 97%);
-  --primary-color-gray-98: color-mix(in oklab, var(--primary-color), gray 98%);
-  --primary-color-gray-99: color-mix(in oklab, var(--primary-color), gray 99%);
-  --secondary-color-white-1: color-mix(in oklab, var(--secondary-color), white 1%);
-  --secondary-color-white-2: color-mix(in oklab, var(--secondary-color), white 2%);
-  --secondary-color-white-3: color-mix(in oklab, var(--secondary-color), white 3%);
-  --secondary-color-white-4: color-mix(in oklab, var(--secondary-color), white 4%);
-  --secondary-color-white-5: color-mix(in oklab, var(--secondary-color), white 5%);
-  --secondary-color-white-10: color-mix(in oklab, var(--secondary-color), white 10%);
-  --secondary-color-white-15: color-mix(in oklab, var(--secondary-color), white 15%);
-  --secondary-color-white-20: color-mix(in oklab, var(--secondary-color), white 20%);
-  --secondary-color-white-25: color-mix(in oklab, var(--secondary-color), white 25%);
-  --secondary-color-white-30: color-mix(in oklab, var(--secondary-color), white 30%);
-  --secondary-color-white-35: color-mix(in oklab, var(--secondary-color), white 35%);
-  --secondary-color-white-40: color-mix(in oklab, var(--secondary-color), white 40%);
-  --secondary-color-white-50: color-mix(in oklab, var(--secondary-color), white 50%);
-  --secondary-color-white-60: color-mix(in oklab, var(--secondary-color), white 60%);
-  --secondary-color-white-65: color-mix(in oklab, var(--secondary-color), white 65%);
-  --secondary-color-white-70: color-mix(in oklab, var(--secondary-color), white 70%);
-  --secondary-color-white-75: color-mix(in oklab, var(--secondary-color), white 75%);
-  --secondary-color-white-80: color-mix(in oklab, var(--secondary-color), white 80%);
-  --secondary-color-white-85: color-mix(in oklab, var(--secondary-color), white 85%);
-  --secondary-color-white-90: color-mix(in oklab, var(--secondary-color), white 90%);
-  --secondary-color-white-95: color-mix(in oklab, var(--secondary-color), white 95%);
-  --secondary-color-white-96: color-mix(in oklab, var(--secondary-color), white 96%);
-  --secondary-color-white-97: color-mix(in oklab, var(--secondary-color), white 97%);
-  --secondary-color-white-98: color-mix(in oklab, var(--secondary-color), white 98%);
-  --secondary-color-white-99: color-mix(in oklab, var(--secondary-color), white 99%);
-  --secondary-color-black-1: color-mix(in oklab, var(--secondary-color), black 1%);
-  --secondary-color-black-2: color-mix(in oklab, var(--secondary-color), black 2%);
-  --secondary-color-black-3: color-mix(in oklab, var(--secondary-color), black 3%);
-  --secondary-color-black-4: color-mix(in oklab, var(--secondary-color), black 4%);
-  --secondary-color-black-5: color-mix(in oklab, var(--secondary-color), black 5%);
-  --secondary-color-black-10: color-mix(in oklab, var(--secondary-color), black 10%);
-  --secondary-color-black-15: color-mix(in oklab, var(--secondary-color), black 15%);
-  --secondary-color-black-20: color-mix(in oklab, var(--secondary-color), black 20%);
-  --secondary-color-black-25: color-mix(in oklab, var(--secondary-color), black 25%);
-  --secondary-color-black-30: color-mix(in oklab, var(--secondary-color), black 30%);
-  --secondary-color-black-35: color-mix(in oklab, var(--secondary-color), black 35%);
-  --secondary-color-black-40: color-mix(in oklab, var(--secondary-color), black 40%);
-  --secondary-color-black-50: color-mix(in oklab, var(--secondary-color), black 50%);
-  --secondary-color-black-60: color-mix(in oklab, var(--secondary-color), black 60%);
-  --secondary-color-black-65: color-mix(in oklab, var(--secondary-color), black 65%);
-  --secondary-color-black-70: color-mix(in oklab, var(--secondary-color), black 70%);
-  --secondary-color-black-75: color-mix(in oklab, var(--secondary-color), black 75%);
-  --secondary-color-black-80: color-mix(in oklab, var(--secondary-color), black 80%);
-  --secondary-color-black-85: color-mix(in oklab, var(--secondary-color), black 85%);
-  --secondary-color-black-90: color-mix(in oklab, var(--secondary-color), black 90%);
-  --secondary-color-black-95: color-mix(in oklab, var(--secondary-color), black 95%);
-  --secondary-color-black-96: color-mix(in oklab, var(--secondary-color), black 96%);
-  --secondary-color-black-97: color-mix(in oklab, var(--secondary-color), black 97%);
-  --secondary-color-black-98: color-mix(in oklab, var(--secondary-color), black 98%);
-  --secondary-color-black-99: color-mix(in oklab, var(--secondary-color), black 99%);
-  --secondary-color-gray-1: color-mix(in oklab, var(--secondary-color), gray 1%);
-  --secondary-color-gray-2: color-mix(in oklab, var(--secondary-color), gray 2%);
-  --secondary-color-gray-3: color-mix(in oklab, var(--secondary-color), gray 3%);
-  --secondary-color-gray-4: color-mix(in oklab, var(--secondary-color), gray 4%);
-  --secondary-color-gray-5: color-mix(in oklab, var(--secondary-color), gray 5%);
-  --secondary-color-gray-10: color-mix(in oklab, var(--secondary-color), gray 10%);
-  --secondary-color-gray-15: color-mix(in oklab, var(--secondary-color), gray 15%);
-  --secondary-color-gray-20: color-mix(in oklab, var(--secondary-color), gray 20%);
-  --secondary-color-gray-25: color-mix(in oklab, var(--secondary-color), gray 25%);
-  --secondary-color-gray-30: color-mix(in oklab, var(--secondary-color), gray 30%);
-  --secondary-color-gray-35: color-mix(in oklab, var(--secondary-color), gray 35%);
-  --secondary-color-gray-40: color-mix(in oklab, var(--secondary-color), gray 40%);
-  --secondary-color-gray-50: color-mix(in oklab, var(--secondary-color), gray 50%);
-  --secondary-color-gray-60: color-mix(in oklab, var(--secondary-color), gray 60%);
-  --secondary-color-gray-65: color-mix(in oklab, var(--secondary-color), gray 65%);
-  --secondary-color-gray-70: color-mix(in oklab, var(--secondary-color), gray 70%);
-  --secondary-color-gray-75: color-mix(in oklab, var(--secondary-color), gray 75%);
-  --secondary-color-gray-80: color-mix(in oklab, var(--secondary-color), gray 80%);
-  --secondary-color-gray-85: color-mix(in oklab, var(--secondary-color), gray 85%);
-  --secondary-color-gray-90: color-mix(in oklab, var(--secondary-color), gray 90%);
-  --secondary-color-gray-95: color-mix(in oklab, var(--secondary-color), gray 95%);
-  --secondary-color-gray-96: color-mix(in oklab, var(--secondary-color), gray 96%);
-  --secondary-color-gray-97: color-mix(in oklab, var(--secondary-color), gray 97%);
-  --secondary-color-gray-98: color-mix(in oklab, var(--secondary-color), gray 98%);
-  --secondary-color-gray-99: color-mix(in oklab, var(--secondary-color), gray 99%);
-  --primary-color: #195684;
-  --secondary-color: #932c1c;
-}
-:root.dark-mode {
-  color-scheme: dark;
-  --page-color: var(--background-color);
-  --content-background: var(--page-color);
-  --page-border-color: var(--background-color-white-25);
-  --doc-title-color: var(--primary-color);
-  --byline-color: var(--background-color-white-50);
-  --banner-background: #23241f;
-  --navbar-background: var(--background-color-gray-15);
-  --footer-background: var(--background-color-black-10);
-  --toc-border-color: #555;
-  --toc-background: var(--content-background);
-  --tocitem-background: var(--toc-background);
-  --toc-text-color: var(--body-text-color);
-  --tocitem-highlight-background: var(--primary-color-gray-5);
-  --tocitem-highlight-text-color: var(--background-color-black-50);
-  --tocitem-highlight-border-color: var(--toc-border-color);
-  --tocitem-active-background: var(--primary-color-gray-5);
-  --tocitem-active-text-color: var(--background-color-black-50);
-  --tocitem-active-border-color: var(--toc-border-color);
-  --toclevel1-background: var(--background-color-gray-10);
-  --toclevel1-text-color: var(--primary-color-white-40);
-  --toclevel2-background: var(--toclevel1-background);
-  --toclevel2-text-color: var(--toclevel1-text-color);
-  --toclevel3-background: var(--content-background);
-  --toclevel3-text-color: var(--toc-text-color);
-  --body-text-color: #f2f2f2;
-  --body-title-color: var(--primary-color-white-20);
-  --ptx-image-bg: white;
-  --activated-content-bg: rgba(255, 237, 185, 0.2);
-  --summary-link-background: var(--button-background);
-  --summary-link-text-color: var(--button-text-color);
-  --summary-link-hover-background: var(--button-hover-background);
-  --summary-link-hover-text-color: var(--button-hover-text-color);
-  --link-text-color: var(--primary-color-white-10);
   --link-background: transparent;
   --link-active-text-color: var(--primary-color-white-40);
   --link-active-background: var(--background-color-gray-30);
@@ -3692,23 +2492,23 @@ section > h3.heading {
   --link-alt-background: transparent;
   --link-alt-active-text-color: var(--link-alt-text-color);
   --link-alt-active-background: var(--link-active-text-color);
-  --knowl-link-color: var(--doc-title-color);
-  --knowl-background: var(--background-color-black-10);
-  --knowl-border-color: var(--background-color-white-20);
-  --knowl-nested-1-background: var(--background-color-gray-10);
-  --knowl-nested-2-background: var(--background-color-black-10);
-  --knowl-nested-3-background: var(--background-color-gray-10);
-  --knowl-nested-4-background: var(--background-color-black-10);
+  --knowl-link-color: var(--link-text-color);
+  --knowl-background: var(--primary-color-white-95);
+  --knowl-border-color: var(--primary-color);
+  --knowl-nested-1-background: #f5f5ff;
+  --knowl-nested-2-background: #fffff5;
+  --knowl-nested-3-background: #f5ffff;
+  --knowl-nested-4-background: #fff5f5;
   --block-body-background: var(--content-background);
   --block-border-color: var(--knowl-border-color);
-  --block-head-color: var(--body-text-color);
+  --block-head-color: white;
   --aside-like-link-color: var(--link-text-color);
-  --button-background: var(--background-color-gray-15);
-  --button-text-color: var(--body-text-color);
-  --button-border-color: var(--background-color-white-25);
-  --button-hover-background: var(--primary-color-black-50);
+  --button-background: #ededed;
+  --button-text-color: #333333;
+  --button-border-color: #ccc;
+  --button-hover-background: var(--primary-color-white-80);
   --button-hover-text-color: var(--button-text-color);
-  --code-inline: var(--background-color-gray-20);
+  --code-inline: #ededed;
   --dropdown-background: var(--content-background);
   --dropdown-border-color: var(--toc-border-color);
   --dropdown-text-color: var(--toc-text-color);
@@ -3740,83 +2540,6 @@ section > h3.heading {
   --goal-like-border-color: var(--block-border-color);
   --solution-like-body-background: var(--block-body-background);
   --solution-like-border-color: var(--block-border-color);
-  --primary-color: #698aa8;
-  --background-color: #23241f;
-  --background-color-white-1: color-mix(in oklab, var(--background-color), white 1%);
-  --background-color-white-2: color-mix(in oklab, var(--background-color), white 2%);
-  --background-color-white-3: color-mix(in oklab, var(--background-color), white 3%);
-  --background-color-white-4: color-mix(in oklab, var(--background-color), white 4%);
-  --background-color-white-5: color-mix(in oklab, var(--background-color), white 5%);
-  --background-color-white-10: color-mix(in oklab, var(--background-color), white 10%);
-  --background-color-white-15: color-mix(in oklab, var(--background-color), white 15%);
-  --background-color-white-20: color-mix(in oklab, var(--background-color), white 20%);
-  --background-color-white-25: color-mix(in oklab, var(--background-color), white 25%);
-  --background-color-white-30: color-mix(in oklab, var(--background-color), white 30%);
-  --background-color-white-35: color-mix(in oklab, var(--background-color), white 35%);
-  --background-color-white-40: color-mix(in oklab, var(--background-color), white 40%);
-  --background-color-white-50: color-mix(in oklab, var(--background-color), white 50%);
-  --background-color-white-60: color-mix(in oklab, var(--background-color), white 60%);
-  --background-color-white-65: color-mix(in oklab, var(--background-color), white 65%);
-  --background-color-white-70: color-mix(in oklab, var(--background-color), white 70%);
-  --background-color-white-75: color-mix(in oklab, var(--background-color), white 75%);
-  --background-color-white-80: color-mix(in oklab, var(--background-color), white 80%);
-  --background-color-white-85: color-mix(in oklab, var(--background-color), white 85%);
-  --background-color-white-90: color-mix(in oklab, var(--background-color), white 90%);
-  --background-color-white-95: color-mix(in oklab, var(--background-color), white 95%);
-  --background-color-white-96: color-mix(in oklab, var(--background-color), white 96%);
-  --background-color-white-97: color-mix(in oklab, var(--background-color), white 97%);
-  --background-color-white-98: color-mix(in oklab, var(--background-color), white 98%);
-  --background-color-white-99: color-mix(in oklab, var(--background-color), white 99%);
-  --background-color-black-1: color-mix(in oklab, var(--background-color), black 1%);
-  --background-color-black-2: color-mix(in oklab, var(--background-color), black 2%);
-  --background-color-black-3: color-mix(in oklab, var(--background-color), black 3%);
-  --background-color-black-4: color-mix(in oklab, var(--background-color), black 4%);
-  --background-color-black-5: color-mix(in oklab, var(--background-color), black 5%);
-  --background-color-black-10: color-mix(in oklab, var(--background-color), black 10%);
-  --background-color-black-15: color-mix(in oklab, var(--background-color), black 15%);
-  --background-color-black-20: color-mix(in oklab, var(--background-color), black 20%);
-  --background-color-black-25: color-mix(in oklab, var(--background-color), black 25%);
-  --background-color-black-30: color-mix(in oklab, var(--background-color), black 30%);
-  --background-color-black-35: color-mix(in oklab, var(--background-color), black 35%);
-  --background-color-black-40: color-mix(in oklab, var(--background-color), black 40%);
-  --background-color-black-50: color-mix(in oklab, var(--background-color), black 50%);
-  --background-color-black-60: color-mix(in oklab, var(--background-color), black 60%);
-  --background-color-black-65: color-mix(in oklab, var(--background-color), black 65%);
-  --background-color-black-70: color-mix(in oklab, var(--background-color), black 70%);
-  --background-color-black-75: color-mix(in oklab, var(--background-color), black 75%);
-  --background-color-black-80: color-mix(in oklab, var(--background-color), black 80%);
-  --background-color-black-85: color-mix(in oklab, var(--background-color), black 85%);
-  --background-color-black-90: color-mix(in oklab, var(--background-color), black 90%);
-  --background-color-black-95: color-mix(in oklab, var(--background-color), black 95%);
-  --background-color-black-96: color-mix(in oklab, var(--background-color), black 96%);
-  --background-color-black-97: color-mix(in oklab, var(--background-color), black 97%);
-  --background-color-black-98: color-mix(in oklab, var(--background-color), black 98%);
-  --background-color-black-99: color-mix(in oklab, var(--background-color), black 99%);
-  --background-color-gray-1: color-mix(in oklab, var(--background-color), gray 1%);
-  --background-color-gray-2: color-mix(in oklab, var(--background-color), gray 2%);
-  --background-color-gray-3: color-mix(in oklab, var(--background-color), gray 3%);
-  --background-color-gray-4: color-mix(in oklab, var(--background-color), gray 4%);
-  --background-color-gray-5: color-mix(in oklab, var(--background-color), gray 5%);
-  --background-color-gray-10: color-mix(in oklab, var(--background-color), gray 10%);
-  --background-color-gray-15: color-mix(in oklab, var(--background-color), gray 15%);
-  --background-color-gray-20: color-mix(in oklab, var(--background-color), gray 20%);
-  --background-color-gray-25: color-mix(in oklab, var(--background-color), gray 25%);
-  --background-color-gray-30: color-mix(in oklab, var(--background-color), gray 30%);
-  --background-color-gray-35: color-mix(in oklab, var(--background-color), gray 35%);
-  --background-color-gray-40: color-mix(in oklab, var(--background-color), gray 40%);
-  --background-color-gray-50: color-mix(in oklab, var(--background-color), gray 50%);
-  --background-color-gray-60: color-mix(in oklab, var(--background-color), gray 60%);
-  --background-color-gray-65: color-mix(in oklab, var(--background-color), gray 65%);
-  --background-color-gray-70: color-mix(in oklab, var(--background-color), gray 70%);
-  --background-color-gray-75: color-mix(in oklab, var(--background-color), gray 75%);
-  --background-color-gray-80: color-mix(in oklab, var(--background-color), gray 80%);
-  --background-color-gray-85: color-mix(in oklab, var(--background-color), gray 85%);
-  --background-color-gray-90: color-mix(in oklab, var(--background-color), gray 90%);
-  --background-color-gray-95: color-mix(in oklab, var(--background-color), gray 95%);
-  --background-color-gray-96: color-mix(in oklab, var(--background-color), gray 96%);
-  --background-color-gray-97: color-mix(in oklab, var(--background-color), gray 97%);
-  --background-color-gray-98: color-mix(in oklab, var(--background-color), gray 98%);
-  --background-color-gray-99: color-mix(in oklab, var(--background-color), gray 99%);
   --primary-color-white-1: color-mix(in oklab, var(--primary-color), white 1%);
   --primary-color-white-2: color-mix(in oklab, var(--primary-color), white 2%);
   --primary-color-white-3: color-mix(in oklab, var(--primary-color), white 3%);
@@ -3892,9 +2615,224 @@ section > h3.heading {
   --primary-color-gray-97: color-mix(in oklab, var(--primary-color), gray 97%);
   --primary-color-gray-98: color-mix(in oklab, var(--primary-color), gray 98%);
   --primary-color-gray-99: color-mix(in oklab, var(--primary-color), gray 99%);
+  --primary-color: black;
+  --assemb-border-color: var(--primary-color-white-50);
 }
-/*! Theme: default-modern */
-/*# sourceMappingURL=theme.css.map */
-
-/* generated from pub variables */
-:root:not(.dark-mode) {--primary-color: #195684;--secondary-color: #932c1c;}
+:root {
+  --ws-width: 8.5in;
+  --ws-height: 11in;
+  --ws-top-margin: 40px;
+  --ws-right-margin: 55px;
+  --ws-bottom-margin: 45px;
+  --ws-left-margin: 45px;
+  --ws-content-width: calc(var(--ws-width) - var(--ws-right-margin) - var(--ws-left-margin));
+  --ws-content-height: calc(var(--ws-height) - var(--ws-top-margin) - var(--ws-bottom-margin));
+}
+.pretext .ptx-masthead,
+.pretext .ptx-navbar,
+body.pretext > a.assistive,
+.pretext .ptx-page > .ptx-sidebar,
+.pretext .ptx-page-footer,
+.pretext .ptx-main > div.ptx-content-footer {
+  display: none;
+}
+.heading .print-links {
+  display: none;
+}
+.autopermalink {
+  display: none;
+}
+section.worksheet {
+  font-size: 11pt;
+  font-family: var(--font-print);
+}
+.onepage > .heading {
+  margin-top: 0;
+  font-size: 1.3em;
+}
+.onepage .instructions {
+  display: none;
+}
+summary::marker {
+  content: "";
+}
+summary {
+  font-weight: bolder;
+  display: inline;
+}
+details > div.knowl__content {
+  display: inline;
+  margin: unset;
+  border: none;
+  padding: 3px 0;
+  background-color: unset;
+}
+.knowl__link {
+  all: unset;
+}
+.onepage article {
+  padding-left: 0;
+  border: none;
+}
+.onepage article::after {
+  all: unset;
+}
+.onepage > .para:first-child,
+.onepage > article:first-child {
+  margin-top: 0;
+}
+.onepage > section > .heading {
+  margin-top: 0;
+}
+section article.task {
+  margin-left: 0;
+}
+section.worksheet > .heading {
+  display: inline;
+  font-size: 1.1em;
+}
+section.worksheet > .heading + .para {
+  display: inline;
+}
+.introduction > .heading,
+.conclusion > .heading {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.introduction > .heading + .para,
+.conclusion > .heading + .para {
+  margin-top: 0.5em;
+}
+form.papersize-select {
+  padding-bottom: 8px;
+}
+@media screen {
+  .ptx-main {
+    max-width: var(--ws-width);
+    margin: 50px auto;
+  }
+  .worksheet {
+    max-width: var(--ws-width);
+    margin: 0 auto;
+  }
+  .onepage {
+    width: 100%;
+    height: var(--ws-height);
+    padding: var(--ws-top-margin) var(--ws-right-margin) var(--ws-bottom-margin) var(--ws-left-margin);
+    box-shadow: 5px 10px 40px -10px;
+  }
+  .onepage + .onepage {
+    margin-top: 2.5em;
+  }
+  .workspace-container {
+    display: flex;
+    overflow: visible;
+  }
+  .workspace {
+    width: 100%;
+  }
+  .highlight-workspace .onepage .workspace {
+    border: 1px dashed grey;
+    background: hsl(224, 100%, 95%);
+  }
+  .onepage .original-workspace {
+    display: none;
+  }
+  .highlight-workspace .onepage .original-workspace {
+    display: block;
+    width: 10px;
+    background: hsl(152, 29%, 65%);
+  }
+  .highlight-workspace .onepage .warning {
+    background: hsl(36, 65%, 67%);
+  }
+  .print-button {
+    font: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    gap: 10px;
+    min-height: 34px;
+    color: var(--button-text-color);
+    background-color: var(--button-background);
+    border-width: 1px;
+    border-color: var(--button-border-color);
+    border-style: solid;
+    border-radius: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    user-select: none;
+  }
+  .print-button:hover:not(.disabled) {
+    color: var(--button-hover-text-color);
+    background-color: var(--button-hover-background);
+  }
+  .print-button:focus-visible {
+    outline: 2px solid var(--button-text-color);
+    outline-offset: -2px;
+  }
+  .print-button.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .print-button.hidden {
+    display: none;
+  }
+  .print-button.open {
+    color: var(--button-hover-text-color);
+    background-color: var(--button-hover-background);
+  }
+  .papersize-select {
+    z-index: 1;
+  }
+  .papersize-select .name::after {
+    content: ": ";
+  }
+  .print-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1em;
+  }
+}
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    width: var(--ws-content-width);
+  }
+  .print-preview-header {
+    display: none;
+  }
+  section.worksheet {
+    border: none;
+    width: 100%;
+  }
+  section.worksheet .onepage {
+    margin-top: 0;
+    width: 100%;
+    height: var(--ws-content-height);
+    overflow: hidden;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  section.worksheet div.workspace,
+  section.worksheet div.workspace.squashed.tight {
+    border: none;
+    padding: 0;
+    background: none !important;
+  }
+  a {
+    color: black;
+  }
+  @page {
+    margin: var(--ws-top-margin, 40px) var(--ws-right-margin, 55px) var(--ws-bottom-margin, 45px) var(--ws-left-margin, 45px);
+  }
+}
+/*! Theme: print-worksheet */
+/*# sourceMappingURL=print-worksheet.css.map */
